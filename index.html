@@ -1,0 +1,189 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mythra — Pure. Natural. Healthy.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Mythra — Organic food products. Pure. Natural. Healthy." />
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>html{scroll-behavior:smooth}</style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">M</div>
+        <div>
+          <div style="font-weight:700">Mythra</div>
+          <div style="font-size:12px;color:var(--muted)">Pure. Natural. Healthy.</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="cta" href="#products">Shop</a>
+        <button class="hamb" aria-label="menu" onclick="toggleNav()">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home -->
+    <section id="home" class="container hero" aria-label="home">
+      <div>
+        <div class="eyebrow pill">Organic • Sustainably sourced</div>
+        <h1>Mythra — Pure food from trusted farms</h1>
+        <p class="muted">Small-batch organic food products — spices, pulses, flours, cold-pressed oils and more. Ethically sourced, pesticide-free and packed with care.</p>
+        <div class="hero-actions">
+          <a class="cta" href="#products">Shop Now</a>
+          <a href="#about" style="padding:10px 14px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);">Our Story</a>
+        </div>
+        <div style="margin-top:22px;display:flex;gap:12px">
+          <div class="card" style="flex:1">
+            <strong>Free shipping</strong>
+            <div class="muted" style="font-size:13px">On orders above ₹800</div>
+          </div>
+          <div class="card" style="width:220px">
+            <strong>Hand packed</strong>
+            <div class="muted" style="font-size:13px">Freshly sealed every week</div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card center" style="height:100%">
+          <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6b0b3b2adf3a8ae8dd9df7be0f5c3d14" alt="Organic products hero">
+        </div>
+      </aside>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container about" style="padding:36px 0">
+      <h2>About Mythra</h2>
+      <p class="muted">Mythra began as a small idea — to make wholesome, chemical-free food accessible to families. We partner with local farmers who practice regenerative farming and fair labor. Every packet that leaves our facility is tested and packed with love.</p>
+
+      <h3 style="margin-top:18px">Our values</h3>
+      <ul class="muted">
+        <li>100% organic ingredients</li>
+        <li>Sustainably packed</li>
+        <li>Transparent sourcing</li>
+      </ul>
+
+      <h3 style="margin-top:18px">Why choose Mythra?</h3>
+      <p class="muted">We keep it simple — clean ingredients, minimal processing, and honest pricing. Try our signature millet flours and single-origin spices.</p>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <div style="flex:1;background:linear-gradient(180deg,#fff,#f8faf6);padding:10px;border-radius:10px">
+          <strong>Grown locally</strong>
+          <div class="muted">Sourced within 200km</div>
+        </div>
+        <div style="flex:1;background:linear-gradient(180deg,#fff,#f8faf6);padding:10px;border-radius:10px">
+          <strong>Quality tested</strong>
+          <div class="muted">Lab-verified batches</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="container" style="padding:36px 0">
+      <h2>Products</h2>
+      <p class="muted">Click any product to view details or to start an order over WhatsApp.</p>
+
+      <div class="product-grid" id="productGrid" style="margin-top:16px"></div>
+
+      <!-- Modal -->
+      <div class="modal" id="modal" role="dialog" aria-hidden="true">
+        <div class="box">
+          <div style="display:flex;gap:18px;align-items:flex-start">
+            <div style="flex:1">
+              <img id="modalImg" src="" alt="product image">
+            </div>
+            <div style="flex:1">
+              <h3 id="modalTitle">Title</h3>
+              <div id="modalPrice" style="font-weight:700;color:var(--green);margin:8px 0">₹--</div>
+              <p id="modalDesc" class="muted">Description</p>
+              <div style="margin-top:12px;display:flex;gap:8px">
+                <a id="whatsappLink" class="cta" href="#" target="_blank">Order on WhatsApp</a>
+                <button onclick="closeModal()" style="padding:10px;border-radius:10px;border:1px solid #eee">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="container" style="padding:36px 0">
+      <h2>Gallery</h2>
+      <p class="muted">Sneak peek into our farm-to-shelf process.</p>
+      <div class="gallery-grid" style="margin-top:12px">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=9f3d8b1a6b2e2b7f4f3d5c2e9a1b" alt="gallery1">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=af4a0c6f5a1f8f9c2b1f2b0a3d" alt="gallery2">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=6a5b3e8b9c6d7e8f9a0b1c2d3e" alt="gallery3">
+        <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=5a4b3c2d1e6f7a8b9c0d1e2f3a" alt="gallery4">
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container" style="padding:36px 0">
+      <h2>Contact</h2>
+      <p class="muted">Have questions or want to place a bulk order? Write to us or reach out on WhatsApp.</p>
+
+      <div class="contact-grid" style="margin-top:12px">
+        <div>
+          <form id="contactForm">
+            <input name="name" placeholder="Your name" required />
+            <input name="email" placeholder="you@example.com" type="email" required />
+            <input name="phone" placeholder="Phone (optional)" />
+            <textarea name="message" placeholder="Message" rows="5" required></textarea>
+            <button class="primary" type="submit">Send message</button>
+          </form>
+
+          <div style="margin-top:12px" class="muted">
+            <div><strong>WhatsApp</strong>: <a href="https://wa.me/919700922008" target="_blank">+91 9700922008</a></div>
+            <div><strong>Email</strong>: <a href="mailto:hello@mythra.example">hello@mythra.example</a></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>Visit our stall</h3>
+            <p class="muted">We attend farmers' markets across the region. Follow our Instagram for event updates.</p>
+            <div style="margin-top:10px"><strong>Location</strong><div class="muted">Chittoor, AndhraPradesh</div></div>
+          </div>
+
+          <div style="margin-top:12px" class="card muted">
+            <strong>Order information</strong>
+            <div style="font-size:13px;margin-top:6px">Minimum order: ₹200 | Shipping: ₹60 (varies)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>
+        <div style="font-weight:700">Mythra</div>
+        <div class="muted" style="font-size:13px">© Mythra — All rights reserved</div>
+      </div>
+      <div class="muted">Follow us: <a href="#">Instagram</a> • <a href="#">Facebook</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/products.js"></script>
+</body>
+</html>
